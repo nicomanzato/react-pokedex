@@ -1,0 +1,21 @@
+export const constants = {
+  POKEMON_TYPE: {
+    ELECTRIC: 'Electric',
+    FIRE: 'Fire',
+    POISON: 'Poison',
+    GRASS: 'Grass',
+    FLYING: 'Flying',
+    WATER: 'Water',
+    BUG: 'Bug',
+    NORMAL: 'Normal',
+    GROUND: 'Ground',
+    FAIRY: 'Fairy',
+    FIGHTING: 'Fighting',
+    PSYCHIC: 'Psychic',
+    DRAGON: 'Dragon',
+    ROCK: 'Rock',
+    STEEL: 'Steel',
+    ICE: 'Ice',
+    GHOST: 'Ghost',
+  },
+}

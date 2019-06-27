@@ -1,0 +1,51 @@
+@import '../../variables.scss';
+
+.pokemonListItem {
+  &__container {
+    background-color: $secondary-background-color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: $spacings-L;
+    position: relative;
+    width: 100%;
+  }
+
+  &__header {
+    background-color: rgba($tertiary-background-color, 0.8);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+  }
+
+  &__pokemonName {
+    color: $secondary-text-color;
+    font-weight: bold;
+    font-size: $font-size-title;
+    padding: 0 0 0 $spacings-M;
+  }
+
+  &__pokemonNumber {
+    color: $secondary-text-color;
+    font-weight: bold;
+    font-size: $font-size-title;
+  }
+
+  &__typeContainer {
+    position: absolute;
+    right: 0;
+    padding: $spacings-M;
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__pokemonType {
+    margin: 0 0 0 $spacings-S;
+  }
+}

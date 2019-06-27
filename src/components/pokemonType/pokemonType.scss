@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+.pokemonType {
+  &__container {
+    display: inline;
+    border: rem-calc(1) solid $black;
+    padding: $spacings-XS;
+    border-radius: rem-calc(20);
+    color: $secondary-text-color;
+    font-size: $font-size-text;
+  }
+
+  &__electricType {
+    background-color: #f4d81c; // ripe lemon
+  }
+
+  &__fireType {
+    background-color: #ff6600; // blaze orange
+  }
+
+  &__poisonType {
+    background-color: #991199; // Violet eggplant
+  }
+
+  &__grassType {
+    background-color: #0a6906; // japanese laurel Green
+  }
+
+  &__flyingType {
+    background-color: #b7b1b1; // nobel grey
+  }
+
+  &__waterType {
+    background-color: #45b1e8; // picton blue
+  }
+
+  &__bugType {
+    background-color: #33cc99; // shamrock green
+  }
+
+  &__normalType {
+    background-color: #c0c0c0; // silver grey
+  }
+
+  &__groundType {
+    background-color: #514649; // emperor brown
+  }
+
+  &__fairyType {
+    background-color: #ecc7ee; // french lilac
+  }
+
+  &__fightingType {
+    background-color: #7f3a02; // peru tan brown
+  }
+
+  &__psychicType {
+    background-color: #fc0fc0; // shocking pink
+  }
+
+  &__dragonType {
+    background-color: #6495ed; // cornflower blue
+  }
+
+  &__rockType {
+    background-color: #d2b48c; // tan brown
+  }
+
+  &__steelType {
+    background-color: #b7b1b1; // nobel
+  }
+
+  &__iceType {
+    background-color: #08e8de; // bright turquoise
+  }
+
+  &__ghostType {
+    background-color: #3c0878; // winsor purple
+  }
+}

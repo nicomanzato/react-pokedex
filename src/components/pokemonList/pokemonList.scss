@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.pokemonList {
+  &__container {
+    clear: both;
+    overflow: hidden;
+  }
+  &__item {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 20vh;
+
+    @media screen and (max-width: $smartphone-breakpoint) {
+      width: 100%;
+    }
+  }
+}

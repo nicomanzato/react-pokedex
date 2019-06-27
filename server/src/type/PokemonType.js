@@ -1,19 +1,11 @@
-import {
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLInt,
-  GraphQLFloat,
-  GraphQLList,
-} from 'graphql';
-import {
-  globalIdField,
-} from 'graphql-relay';
+import { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLFloat, GraphQLList } from 'graphql'
+import { globalIdField } from 'graphql-relay'
 
-import PokemonDimensionType from './PokemonDimensionType';
-import PokemonAttackType from './PokemonAttackType';
-import EvolutionRequirementType from './EvolutionRequirementType';
+import PokemonDimensionType from './PokemonDimensionType'
+import PokemonAttackType from './PokemonAttackType'
+import EvolutionRequirementType from './EvolutionRequirementType'
 
-import { getPokemonByEvolutions } from '../service/Pokemon';
+import { getPokemonByEvolutions } from '../service/Pokemon'
 
 const PokemonType = new GraphQLObjectType({
   name: 'Pokemon',
@@ -92,9 +84,12 @@ const PokemonType = new GraphQLObjectType({
     image: {
       type: GraphQLString,
       resolve: obj =>
-        `https://img.pokemondb.net/artwork/${obj.name.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').replace(' ', '-')}.jpg`,
+        `/assets/img/${obj.name
+          .toLowerCase()
+          .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '')
+          .replace(' ', '-')}.jpg`,
     },
   }),
-});
+})
 
-export default PokemonType;
+export default PokemonType
