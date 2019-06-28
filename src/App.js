@@ -6,7 +6,7 @@ import { ApolloProvider } from 'react-apollo'
 import PokemonSummaryPage from './pages/pokemonSummaryPage/pokemonSummaryPage'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000',
+  uri: process.env.REACT_APP_API_GET_POKEMON,
 })
 
 function App() {
