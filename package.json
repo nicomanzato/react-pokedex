@@ -16,8 +16,7 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "postinstall": "cd server && npm install",
-    "serve": "concurrently -p \"[{name}]\" -n \"REACT,SERVER,STORYBOOK\" -c \"bgGreen.bold,bgMagenta.bold,bgRed.bold\" \"npm:client\" \"npm:server\"",
+    "serve": "concurrently -p \"[{name}]\" -n \"REACT\" -c \"bgGreen.bold\" \"npm:client\"",
     "client": "react-scripts start",
     "start": "node server.js",
     "build": "react-scripts build",
