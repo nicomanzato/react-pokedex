@@ -1,8 +1,44 @@
 @import '../../variables.scss';
 
 .pokemonSummaryPage {
+  &__container {
+    background-image: $primary-gradient-color;
+    min-height: 100vh;
+  }
+
+  &__header {
+    height: 25vh;
+    background-color: $secondary-background-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__titleContainer {
+    padding: $spacings-XXL;
+  }
+
+  &__title {
+    color: $primary-text-color;
+    font-size: $font-size-header;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    color: $primary-text-color;
+  }
+
+  &__searchContainer {
+    padding: $spacings-XXL;
+  }
+
   &__pokemonListContainer {
-    width: 50%;
-    margin: 0 25% 0 25%;
+    padding: $spacings-XL $spacings-XL 0 $spacings-XL;
+
+    @media screen and (max-width: $smartphone-breakpoint) {
+      padding: 0 5% 0 5%;
+    }
   }
 }

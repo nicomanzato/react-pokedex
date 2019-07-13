@@ -18,4 +18,8 @@ export const constants = {
     ICE: 'Ice',
     GHOST: 'Ghost',
   },
-}
+  ROUTES: {
+    pokemonDetailRoute: '/pokemon',
+    pokemonSummaryRoute: '/',
+  },
+};

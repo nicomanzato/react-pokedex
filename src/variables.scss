@@ -5,6 +5,8 @@ $redOrange: #ff3f34;
 $white: #ffffff;
 $grey: grey;
 $black: black;
+$easternBlue: #1e9ab0;
+$skyBlue: #76d7ea;
 
 // colors
 
@@ -14,6 +16,10 @@ $secondary-text-color: $white;
 $primary-background-color: $redOrange;
 $secondary-background-color: $white;
 $tertiary-background-color: $grey;
+
+// gradients
+
+$primary-gradient-color: linear-gradient(to right, $easternBlue, $skyBlue);
 
 // spacings
 
@@ -26,10 +32,12 @@ $spacings-XXL: rem-calc(45);
 
 // font size
 
+$font-size-header: rem-calc(64);
 $font-size-title: rem-calc(32);
 $font-size-text: rem-calc(16);
 $font-size-subtitle: rem-calc(12);
 
 // breakpoints
 
-$smartphone-breakpoint: 640px;
+$smartphone-breakpoint: rem-calc(640);
+$tablet-breakpoint: rem-calc(1024);

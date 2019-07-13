@@ -1,12 +1,12 @@
-import React from 'react'
-import './pokemonSummary.scss'
+import React from 'react';
+import './pokemonSummary.scss';
 
-import { Image } from '../common/image/image'
-import { PokemonType } from '../pokemonType/pokemonType'
+import { Image } from '../common/image/image';
+import { PokemonType } from '../pokemonType/pokemonType';
 
-export const PokemonSummary = ({ data, className }) => {
+export const PokemonSummary = ({ data, className, onClick }) => {
   return (
-    <div className={'pokemonSummary__container ' + className}>
+    <div className={'pokemonSummary__container ' + className} onClick={onClick}>
       <Image src={data.image} className="pokemonSummary__image" />
       <div className="pokemonSummary__header">
         <span className="pokemonSummary__pokemonNumber">#{data.number}</span>
@@ -19,5 +19,5 @@ export const PokemonSummary = ({ data, className }) => {
           ))}
       </div>
     </div>
-  )
-}
+  );
+};

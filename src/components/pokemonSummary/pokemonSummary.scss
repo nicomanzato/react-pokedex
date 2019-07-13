@@ -6,9 +6,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: $spacings-L;
     position: relative;
     width: 100%;
+    overflow: hidden;
   }
 
   &__header {
