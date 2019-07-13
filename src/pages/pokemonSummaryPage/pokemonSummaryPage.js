@@ -1,26 +1,42 @@
 import React, { Component } from 'react'
-import { Query } from 'react-apollo'
 import './pokemonSummaryPage.scss'
+import { connect } from 'react-redux'
 
 import { PokemonList } from '../../components/pokemonList/pokemonList'
-import { GET_POKEMON_LIST } from '../../store/query/pokemon.query'
+
+import { requestGetPokemon } from '../../store/pokemon/pokemon.actions'
 
 class PokemonSummaryPage extends Component {
+  componentDidMount = () => {
+    this.props.requestGetPokemon()
+  }
+
   render() {
     return (
       <div className="pokemonSummaryPage__container">
-        <div className="pokemonSummaryPage__pokemonListContainer">
-          <Query query={GET_POKEMON_LIST}>
-            {({ loading, error, data }) => {
-              if (loading) return <p>Now Loading ...</p>
-              if (error) return <p>Error> :(</p>
-              return <PokemonList data={data.pokemons} />
-            }}
-          </Query>
-        </div>
+        {this.props.isLoading && <>Now Loading ...</>}
+        {!this.props.isLoading && (
+          <div className="pokemonSummaryPage__pokemonListContainer">
+            <PokemonList data={this.props.pokemon} />
+          </div>
+        )}
       </div>
     )
   }
 }
 
-export default PokemonSummaryPage
+function mapStateToProps(state, props) {
+  return {
+    isLoading: state.PokemonReducer.isLoading,
+    pokemon: state.PokemonReducer.pokemon,
+  }
+}
+
+const mapDispatchToProps = {
+  requestGetPokemon: () => requestGetPokemon(),
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PokemonSummaryPage)
