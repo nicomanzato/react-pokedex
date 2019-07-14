@@ -70,7 +70,7 @@ class PokemonDetailPage extends PureComponent {
                 </div>
               </div>
               <div className="pokemonDetailsPage__pokemonMoves pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
-                <div className="pokemonDetailsPage__subheader">Stats</div>
+                <div className="pokemonDetailsPage__subheader">Attacks</div>
                 <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">Fast Attacks</div>
                 <div className="pokemonDetailsPage__pokemonFastAttacksContainer">
                   {this.props.pokemon.attacks &&
