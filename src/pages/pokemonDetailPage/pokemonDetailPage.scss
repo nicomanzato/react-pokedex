@@ -7,11 +7,11 @@
   }
 
   &__header {
-    min-height: 25vh;
+    align-items: center;
     background-color: $primary-gradient-color;
     display: flex;
-    align-items: center;
     justify-content: center;
+    min-height: 25vh;
   }
 
   &__pokemonTitleContainer {
@@ -19,23 +19,23 @@
   }
 
   &__pokemonTitle {
+    color: $secondary-text-color;
     font-size: $font-size-header;
     font-weight: 700;
-    color: $secondary-text-color;
     padding: $spacings-M;
   }
 
   &__body {
+    background-color: $secondary-background-color;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 70vh;
-    background-color: $secondary-background-color;
   }
 
   &__bodyElement {
-    width: 50%;
     padding: $spacings-XL;
+    width: 50%;
 
     @media screen and (max-width: $tablet-breakpoint) {
       width: 100%;
@@ -47,8 +47,8 @@
     width: 33.3%;
 
     @media screen and (max-width: $tablet-breakpoint) {
-      width: 100%;
       margin: 0;
+      width: 100%;
     }
   }
 
@@ -58,10 +58,10 @@
   }
 
   &__pokemonDescription {
-    font-size: $font-size-title;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    font-size: $font-size-title;
+    justify-content: center;
   }
 
   &__subtitle {
@@ -89,8 +89,8 @@
   }
 
   &__pokemonMoveSubtitle {
-    padding: 0 0 $spacings-S 0;
     margin: $spacings-L 0;
+    padding: 0 0 $spacings-S 0;
   }
 
   &__pokemonEvolution {
@@ -98,8 +98,8 @@
   }
 
   &__backButton {
+    left: $spacings-L;
     position: absolute;
     top: $spacings-L;
-    left: $spacings-L;
   }
 }

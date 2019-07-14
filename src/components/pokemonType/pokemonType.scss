@@ -2,13 +2,13 @@
 
 .pokemonType {
   &__container {
-    display: inline;
-    border: rem-calc(1) solid $black;
-    padding: $spacings-XS;
     border-radius: rem-calc(15);
+    border: rem-calc(1) solid $black;
     color: $secondary-text-color;
+    display: inline;
     font-size: $font-size-text;
     font-weight: 700;
+    padding: $spacings-XS;
   }
 
   &__electricType {

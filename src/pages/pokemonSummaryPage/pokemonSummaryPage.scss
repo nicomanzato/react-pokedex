@@ -6,11 +6,11 @@
   }
 
   &__header {
-    height: 25vh;
+    align-items: center;
     background-color: $secondary-background-color;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    height: 25vh;
     justify-content: space-between;
   }
 

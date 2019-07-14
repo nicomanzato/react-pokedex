@@ -5,16 +5,16 @@
     cursor: pointer;
   }
   &__arrow {
-    display: inline-block;
-    border-right: rem-calc(5) solid $white;
     border-bottom: rem-calc(5) solid $white;
-    width: rem-calc(25);
+    border-right: rem-calc(5) solid $white;
+    display: inline-block;
     height: rem-calc(25);
     transform: rotate(-225deg);
+    width: rem-calc(25);
 
     @media screen and (max-width: $tablet-breakpoint) {
-      width: rem-calc(15);
       height: rem-calc(15);
+      width: rem-calc(15);
     }
   }
 }

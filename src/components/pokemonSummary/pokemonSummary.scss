@@ -2,43 +2,43 @@
 
 .pokemonSummary {
   &__container {
+    align-items: center;
     background-color: $secondary-background-color;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    overflow: hidden;
     position: relative;
     width: 100%;
-    overflow: hidden;
   }
 
   &__header {
-    background-color: rgba($tertiary-background-color, 0.8);
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    display: flex;
-    position: absolute;
+    background-color: rgba($tertiary-background-color, 0.8);
     bottom: 0;
+    display: flex;
     height: 25%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
   }
 
   &__pokemonName {
     color: $secondary-text-color;
-    font-weight: bold;
     font-size: $font-size-title;
+    font-weight: bold;
     padding: 0 0 0 $spacings-M;
   }
 
   &__pokemonNumber {
     color: $secondary-text-color;
-    font-weight: bold;
     font-size: $font-size-title;
+    font-weight: bold;
   }
 
   &__typeContainer {
+    padding: $spacings-M;
     position: absolute;
     right: 0;
-    padding: $spacings-M;
   }
 
   &__image {

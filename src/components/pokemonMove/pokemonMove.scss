@@ -2,28 +2,28 @@
 
 .pokemonMove {
   &__container {
-    padding: $spacings-S $spacings-S;
-    margin: $spacings-S 0;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    margin: $spacings-S 0;
+    padding: $spacings-S $spacings-S;
   }
 
   &__attackName {
   }
 
   &__attackDetailsContainer {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
   }
 
   &__attackPower {
-    margin: 0 $spacings-S;
-    border-radius: $spacings-L;
-    padding: $spacings-S;
-    color: white;
     background-color: black;
+    border-radius: $spacings-L;
+    color: white;
+    margin: 0 $spacings-S;
+    padding: $spacings-S;
   }
 }

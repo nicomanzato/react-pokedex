@@ -2,14 +2,14 @@
 
 .footer {
   &__container {
-    padding: $spacings-L;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    padding: $spacings-L;
   }
 
   &__repositoryImage {
-    height: rem-calc(30);
     cursor: pointer;
+    height: rem-calc(30);
   }
 }

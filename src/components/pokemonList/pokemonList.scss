@@ -2,19 +2,19 @@
 
 .pokemonList {
   &__container {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     overflow: hidden;
   }
 
   &__item {
     box-sizing: border-box;
-    width: 30%;
-    margin: $spacings-S;
     height: 20vh;
+    margin: $spacings-S;
+    width: 30%;
 
     @media screen and (max-width: $tablet-breakpoint) {
       width: 45%;
