@@ -21,10 +21,10 @@ class PokemonSummaryPage extends PureComponent {
 
   render() {
     return (
-      <section className="pokemonSummaryPage__container">
+      <>
         {this.props.isLoading && <LoadingIndicator />}
         {!this.props.isLoading && (
-          <>
+          <section className="pokemonSummaryPage__container">
             <div className="pokemonSummaryPage__header">
               <div className="pokemonSummaryPage__titleContainer">
                 <div className="pokemonSummaryPage__title">Pokedex</div>
@@ -43,9 +43,9 @@ class PokemonSummaryPage extends PureComponent {
                 onClick={this.handleOnPokemonItemClick}
               />
             </div>
-          </>
+          </section>
         )}
-      </section>
+      </>
     );
   }
 }
