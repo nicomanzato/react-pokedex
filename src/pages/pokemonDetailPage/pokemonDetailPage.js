@@ -108,6 +108,9 @@ class PokemonDetailPage extends PureComponent {
                         className="pokemonDetailsPage__pokemonEvolution"
                       />
                     ))}
+                  {this.props.pokemon.evolutions === null && (
+                    <div className="pokemonDetailsPage__noEvolutionsAvailable">No evolution available</div>
+                  )}
                 </div>
               </div>
               <BackButton className="pokemonDetailsPage__backButton" onClick={this.handleOnBackButtonClick} />

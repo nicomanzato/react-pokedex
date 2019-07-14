@@ -44,4 +44,20 @@
       padding: $spacings-XS $spacings-XS 0 $spacings-XS;
     }
   }
+
+  // animations
+
+  &__container {
+    opacity: 1;
+    animation: fadein 300ms;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }

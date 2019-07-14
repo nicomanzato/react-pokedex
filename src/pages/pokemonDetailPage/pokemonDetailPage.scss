@@ -26,9 +26,10 @@
   }
 
   &__body {
-    background-color: $secondary-background-color;
+    background-color: $primary-gradient-color;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
     min-height: 70vh;
   }
@@ -36,6 +37,7 @@
   &__bodyElement {
     padding: $spacings-XL;
     width: 50%;
+    background: $secondary-background-color;
 
     @media screen and (max-width: $tablet-breakpoint) {
       width: 100%;
@@ -44,11 +46,18 @@
   }
 
   &__smallBodyElement {
-    width: 33.3%;
+    width: 25%;
+    margin: $spacings-L 0;
+    box-shadow: 10px 5px 5px $grey;
+    border: rem-calc(1) solid $grey;
 
     @media screen and (max-width: $tablet-breakpoint) {
       margin: 0;
       width: 100%;
+
+      box-shadow: unset;
+      border: unset;
+      border-bottom: rem-calc(1) solid $grey;
     }
   }
 
@@ -72,8 +81,13 @@
   &__pokemonStats {
   }
 
+  &__pokemonTypes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__pokemonType {
-    margin: 0 $spacings-S 0 0;
+    margin: $spacings-S $spacings-S $spacings-S 0;
   }
 
   &__pokemonTypesResistant {
@@ -93,13 +107,40 @@
     padding: 0 0 $spacings-S 0;
   }
 
+  &__pokemonEvolutions {
+    background-color: $white;
+  }
+
   &__pokemonEvolution {
     margin: 0 0 $spacings-L 0;
+  }
+
+  &__noEvolutionsAvailable {
+    font-size: $font-size-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__backButton {
     left: $spacings-L;
     position: absolute;
     top: $spacings-L;
+  }
+
+  // animations
+
+  &__container {
+    opacity: 1;
+    animation: fadein 300ms;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

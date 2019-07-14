@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { PokemonSummary } from '../pokemonSummary/pokemonSummary';
 import './pokemonList.scss';
-import classNames from 'classnames/bind';
 
 export class PokemonList extends Component {
   render() {
@@ -12,9 +11,7 @@ export class PokemonList extends Component {
             data={pokemon}
             onClick={() => this.props.onClick(pokemon)}
             key={index}
-            className={classNames({
-              pokemonList__item: true,
-            })}
+            className={'pokemonList__item ' + this.props.classNameItem}
           />
         ))}
       </div>

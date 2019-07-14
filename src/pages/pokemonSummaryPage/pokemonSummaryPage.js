@@ -37,7 +37,11 @@ class PokemonSummaryPage extends PureComponent {
               </div>
             </div>
             <div className="pokemonSummaryPage__pokemonListContainer">
-              <PokemonList data={this.props.pokemon} onClick={this.handleOnPokemonItemClick} />
+              <PokemonList
+                data={this.props.pokemon}
+                classNameItem="pokemonSummaryPage__pokemonListItem"
+                onClick={this.handleOnPokemonItemClick}
+              />
             </div>
           </>
         )}
