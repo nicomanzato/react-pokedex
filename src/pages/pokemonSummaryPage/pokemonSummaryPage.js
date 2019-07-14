@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './pokemonSummaryPage.scss';
 import { connect } from 'react-redux';
 
@@ -10,7 +10,7 @@ import { requestGetPokemon } from '../../store/pokemon/pokemon.actions';
 
 import { constants } from '../../constants';
 
-class PokemonSummaryPage extends Component {
+class PokemonSummaryPage extends PureComponent {
   componentDidMount = () => {
     this.props.requestGetPokemon();
   };

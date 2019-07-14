@@ -1,17 +1,26 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './pokemonDetailPage.scss';
 import { connect } from 'react-redux';
 
 import { Image } from '../../components/common/image/image';
 import { LoadingIndicator } from '../../components/loadingIndicator/loadingIndicator';
 import { PokemonType } from '../../components/pokemonType/pokemonType';
+import { PokemonMove } from '../../components/pokemonMove/pokemonMove';
+import { PokemonEvolution } from '../../components/pokemonEvolution/pokemonEvolution';
+import { BackButton } from '../../components/backButton/backButton';
 
 import { requestGetPokemonDetails } from '../../store/pokemon/pokemon.actions';
 
-class PokemonDetailPage extends Component {
+import { constants } from '../../constants';
+
+class PokemonDetailPage extends PureComponent {
   componentDidMount = () => {
     const pokemonName = this.props.match.params.pokemon;
     this.props.requestGetPokemonDetails(pokemonName);
+  };
+
+  handleOnBackButtonClick = () => {
+    this.props.history.push(constants.ROUTES.pokemonSummaryRoute);
   };
 
   render() {
@@ -61,12 +70,47 @@ class PokemonDetailPage extends Component {
                   </div>
                 </div>
                 <div className="pokemonDetailsPage__pokemonMoves pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
-                  MOVES
+                  <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">
+                    Fast Attacks
+                  </div>
+                  <div className="pokemonDetailsPage__pokemonFastAttacksContainer">
+                    {this.props.pokemon.attacks &&
+                      this.props.pokemon.attacks.fast &&
+                      this.props.pokemon.attacks.fast.map((attack, index) => (
+                        <PokemonMove
+                          data={attack}
+                          className="pokemonDetailsPage__pokemonMove"
+                          key={'pokemonDetailsPage__pokemonMove' + index}
+                        />
+                      ))}
+                  </div>
+                  <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">
+                    Special Attacks
+                  </div>
+                  <div className="pokemonDetailsPage__pokemonSpecialAttacksContainer">
+                    {this.props.pokemon.attacks &&
+                      this.props.pokemon.attacks.special &&
+                      this.props.pokemon.attacks.special.map((attack, index) => (
+                        <PokemonMove
+                          data={attack}
+                          className="pokemonDetailsPage__pokemonMove"
+                          key={'pokemonDetailsPage__pokemonMove' + index}
+                        />
+                      ))}
+                  </div>
                 </div>
                 <div className="pokemonDetailsPage__pokemonEvolutions pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
-                  EVOLUTION
+                  {this.props.pokemon.evolutions &&
+                    this.props.pokemon.evolutions.map((pokemon, index) => (
+                      <PokemonEvolution
+                        data={pokemon}
+                        key={'pokemonDetailsPage__pokemonEvolution' + index}
+                        className="pokemonDetailsPage__pokemonEvolution"
+                      />
+                    ))}
                 </div>
               </div>
+              <BackButton className="pokemonDetailsPage__backButton" onClick={this.handleOnBackButtonClick} />
             </>
           )}
         </section>

@@ -17,10 +17,17 @@ export const constants = {
     STEEL: 'Steel',
     ICE: 'Ice',
     GHOST: 'Ghost',
+    DARK: 'Dark',
+  },
+  RESOURCES: {
+    REPOSITORY_IMAGE_URL: '/assets/Github_Logo.png',
   },
   ROUTES: {
     pokemonDetailRoute: '/pokemon',
     pokemonDetailRouteParams: '/:pokemon',
     pokemonSummaryRoute: '/',
+  },
+  URL: {
+    REPOSITORY: 'https://github.com/nicomanzato/react-pokedex',
   },
 };

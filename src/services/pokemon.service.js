@@ -38,22 +38,16 @@ export const getPokemonDetails = pokemon => {
             type
             damage
           }
+          fast {
+            name
+            type
+            damage
+          }
         }
         evolutions {
-          id
           number
           name
-          weight {
-            minimum
-            maximum
-          }
-          attacks {
-            fast {
-              name
-              type
-              damage
-            }
-          }
+          image
         }
       }
     }

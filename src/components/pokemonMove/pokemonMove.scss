@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.pokemonMove {
+  &__container {
+    padding: $spacings-S $spacings-S;
+    margin: $spacings-S 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__attackName {
+  }
+
+  &__attackDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__attackPower {
+    margin: 0 $spacings-S;
+    border-radius: $spacings-L;
+    padding: $spacings-S;
+    color: white;
+    background-color: black;
+  }
+}

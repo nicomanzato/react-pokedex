@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.pokemonEvolution {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: $spacings-L;
+  }
+
+  &__pokemonImage {
+    height: rem-calc(100);
+  }
+
+  &__pokemonName {
+    font-size: $font-size-subtitle;
+  }
+}

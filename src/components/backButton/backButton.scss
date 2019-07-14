@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.backButton {
+  &__container {
+    cursor: pointer;
+  }
+  &__arrow {
+    display: inline-block;
+    border-right: rem-calc(5) solid $white;
+    border-bottom: rem-calc(5) solid $white;
+    width: rem-calc(25);
+    height: rem-calc(25);
+    transform: rotate(-225deg);
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      width: rem-calc(15);
+      height: rem-calc(15);
+    }
+  }
+}

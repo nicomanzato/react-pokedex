@@ -1,7 +1,7 @@
-import React from 'react'
-import './pokemonType.scss'
-import classNames from 'classnames/bind'
-import { constants } from '../../constants'
+import React from 'react';
+import './pokemonType.scss';
+import classNames from 'classnames/bind';
+import { constants } from '../../constants';
 
 export const PokemonType = ({ type, name, className }) => {
   const classes = {
@@ -23,10 +23,11 @@ export const PokemonType = ({ type, name, className }) => {
     pokemonType__steelType: type === constants.POKEMON_TYPE.STEEL,
     pokemonType__iceType: type === constants.POKEMON_TYPE.ICE,
     pokemonType__ghostType: type === constants.POKEMON_TYPE.GHOST,
-  }
+    pokemonType__darkType: type === constants.POKEMON_TYPE.DARK,
+  };
   if (className) {
-    classes[className] = true
+    classes[className] = true;
   }
 
-  return <div className={classNames(classes)}>{name ? name : type}</div>
-}
+  return <div className={classNames(classes)}>{name ? name : type}</div>;
+};

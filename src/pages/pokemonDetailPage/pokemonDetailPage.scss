@@ -3,6 +3,7 @@
 .pokemonDetailsPage {
   &__container {
     background-image: $primary-gradient-color;
+    position: relative;
   }
 
   &__header {
@@ -64,6 +65,7 @@
   }
 
   &__subtitle {
+    font-size: $font-size-subtitle;
     margin: $spacings-L 0;
   }
 
@@ -82,9 +84,22 @@
     margin: $spacings-L 0 0 0;
   }
 
-  &__pokemonMoves {
+  &__pokemonMove {
+    border-bottom: rem-calc(1) solid $primary-border-color;
   }
 
-  &__pokemonEvolutions {
+  &__pokemonMoveSubtitle {
+    padding: 0 0 $spacings-S 0;
+    margin: $spacings-L 0;
+  }
+
+  &__pokemonEvolution {
+    margin: 0 0 $spacings-L 0;
+  }
+
+  &__backButton {
+    position: absolute;
+    top: $spacings-L;
+    left: $spacings-L;
   }
 }

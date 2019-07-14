@@ -3,5 +3,13 @@
 .footer {
   &__container {
     padding: $spacings-L;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__repositoryImage {
+    height: rem-calc(30);
+    cursor: pointer;
   }
 }
