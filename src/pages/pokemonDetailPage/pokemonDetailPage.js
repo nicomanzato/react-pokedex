@@ -100,14 +100,18 @@ class PokemonDetailPage extends PureComponent {
                   </div>
                 </div>
                 <div className="pokemonDetailsPage__pokemonEvolutions pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
-                  {this.props.pokemon.evolutions &&
-                    this.props.pokemon.evolutions.map((pokemon, index) => (
-                      <PokemonEvolution
-                        data={pokemon}
-                        key={'pokemonDetailsPage__pokemonEvolution' + index}
-                        className="pokemonDetailsPage__pokemonEvolution"
-                      />
-                    ))}
+                  {this.props.pokemon.evolutions && (
+                    <>
+                      <div className="pokemonDetailsPage__subtitle">Evolution</div>{' '}
+                      {this.props.pokemon.evolutions.map((pokemon, index) => (
+                        <PokemonEvolution
+                          data={pokemon}
+                          key={'pokemonDetailsPage__pokemonEvolution' + index}
+                          className="pokemonDetailsPage__pokemonEvolution"
+                        />
+                      ))}
+                    </>
+                  )}
                   {this.props.pokemon.evolutions === null && (
                     <div className="pokemonDetailsPage__noEvolutionsAvailable">No evolution available</div>
                   )}
