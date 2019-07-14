@@ -61,6 +61,12 @@
     }
   }
 
+  &__subheader {
+    font-size: $font-size-title;
+    display: flex;
+    justify-content: center;
+  }
+
   &__pokemonImageContainer {
     display: flex;
     justify-content: center;
@@ -119,7 +125,10 @@
     font-size: $font-size-title;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
+
+    height: 100%;
   }
 
   &__backButton {

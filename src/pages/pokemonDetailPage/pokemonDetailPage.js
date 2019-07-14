@@ -43,6 +43,7 @@ class PokemonDetailPage extends PureComponent {
                   {this.props.pokemon.classification}
                 </div>
                 <div className="pokemonDetailsPage__pokemonStats pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
+                  <div className="pokemonDetailsPage__subheader">Stats</div>
                   <div className="pokemonDetailsPage__subtitle">Pokemon Type</div>
                   <div className="pokemonDetailsPage__pokemonTypes">
                     {this.props.pokemon.types &&
@@ -70,6 +71,7 @@ class PokemonDetailPage extends PureComponent {
                   </div>
                 </div>
                 <div className="pokemonDetailsPage__pokemonMoves pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
+                  <div className="pokemonDetailsPage__subheader">Stats</div>
                   <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">
                     Fast Attacks
                   </div>
@@ -102,7 +104,7 @@ class PokemonDetailPage extends PureComponent {
                 <div className="pokemonDetailsPage__pokemonEvolutions pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
                   {this.props.pokemon.evolutions && (
                     <>
-                      <div className="pokemonDetailsPage__subtitle">Evolution</div>{' '}
+                      <div className="pokemonDetailsPage__subheader">Evolution</div>{' '}
                       {this.props.pokemon.evolutions.map((pokemon, index) => (
                         <PokemonEvolution
                           data={pokemon}
