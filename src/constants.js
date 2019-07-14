@@ -20,7 +20,7 @@ export const constants = {
     DARK: 'Dark',
   },
   RESOURCES: {
-    REPOSITORY_IMAGE_URL: '/assets/img/Github_Logo.png',
+    REPOSITORY_IMAGE_URL: '/assets/img/github.png',
   },
   ROUTES: {
     pokemonDetailRoute: '/pokemon',
