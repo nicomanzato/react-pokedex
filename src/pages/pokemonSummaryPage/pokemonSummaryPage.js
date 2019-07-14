@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { PokemonList } from '../../components/pokemonList/pokemonList';
 import { FilterForm } from '../../components/filterForm/filterForm';
+import { LoadingIndicator } from '../../components/loadingIndicator/loadingIndicator';
 
 import { requestGetPokemon } from '../../store/pokemon/pokemon.actions';
 
@@ -20,8 +21,8 @@ class PokemonSummaryPage extends Component {
 
   render() {
     return (
-      <div className="pokemonSummaryPage__container">
-        {this.props.isLoading && <>Now Loading ...</>}
+      <section className="pokemonSummaryPage__container">
+        {this.props.isLoading && <LoadingIndicator />}
         {!this.props.isLoading && (
           <>
             <div className="pokemonSummaryPage__header">
@@ -40,7 +41,7 @@ class PokemonSummaryPage extends Component {
             </div>
           </>
         )}
-      </div>
+      </section>
     );
   }
 }

@@ -1,3 +1,5 @@
-html {
-  font-family: 'Arial';
+.app {
+  &__container {
+    position: relative;
+  }
 }

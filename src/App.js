@@ -1,24 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.scss';
-import { Provider } from 'react-redux';
-import { store } from './store';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { constants } from './constants';
 
-import PokemonSummaryPage from './pages/pokemonSummaryPage/pokemonSummaryPage';
-import PokemonDetailPage from './pages/pokemonDetailPage/pokemonDetailPage';
+import { connect } from 'react-redux';
+import { requestGetPokemon } from './store/pokemon/pokemon.actions';
 
-function App() {
-  return (
-    <Provider store={store}>
+import { Footer } from './components/footer/footer';
+import { Router } from './Router';
+
+class App extends Component {
+  componentDidMount = () => {
+    this.props.requestGetPokemon();
+  };
+
+  render() {
+    return (
       <React.StrictMode>
-        <BrowserRouter>
-          <Route exact path={constants.ROUTES.pokemonSummaryRoute} component={PokemonSummaryPage} />
-          <Route path={constants.ROUTES.pokemonDetailRoute + '/:pokemon'} component={PokemonDetailPage} />
-        </BrowserRouter>
+        <div className="app__container">
+          <Router />
+          <Footer />
+        </div>
       </React.StrictMode>
-    </Provider>
-  );
+    );
+  }
 }
 
-export default App;
+function mapStateToProps(state, props) {
+  return {};
+}
+
+const mapDispatchToProps = {
+  requestGetPokemon: () => requestGetPokemon(),
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

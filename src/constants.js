@@ -20,6 +20,7 @@ export const constants = {
   },
   ROUTES: {
     pokemonDetailRoute: '/pokemon',
+    pokemonDetailRouteParams: '/:pokemon',
     pokemonSummaryRoute: '/',
   },
 };

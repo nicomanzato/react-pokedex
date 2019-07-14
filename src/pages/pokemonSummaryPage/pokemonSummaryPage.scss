@@ -3,7 +3,6 @@
 .pokemonSummaryPage {
   &__container {
     background-image: $primary-gradient-color;
-    min-height: 100vh;
   }
 
   &__header {
@@ -37,8 +36,12 @@
   &__pokemonListContainer {
     padding: $spacings-XL $spacings-XL 0 $spacings-XL;
 
+    @media screen and (max-width: $tablet-breakpoint) {
+      padding: $spacings-S $spacings-S 0 $spacings-S;
+    }
+
     @media screen and (max-width: $smartphone-breakpoint) {
-      padding: 0 5% 0 5%;
+      padding: $spacings-XS $spacings-XS 0 $spacings-XS;
     }
   }
 }

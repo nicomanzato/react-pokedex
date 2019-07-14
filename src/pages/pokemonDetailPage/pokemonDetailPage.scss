@@ -1,8 +1,90 @@
 @import '../../variables.scss';
 
-.pokemonDetailPage {
+.pokemonDetailsPage {
   &__container {
     background-image: $primary-gradient-color;
-    min-height: 100vh;
+  }
+
+  &__header {
+    min-height: 25vh;
+    background-color: $primary-gradient-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pokemonTitleContainer {
+    margin: $spacings-L;
+  }
+
+  &__pokemonTitle {
+    font-size: $font-size-header;
+    font-weight: 700;
+    color: $secondary-text-color;
+    padding: $spacings-M;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 70vh;
+    background-color: $secondary-background-color;
+  }
+
+  &__bodyElement {
+    width: 50%;
+    padding: $spacings-XL;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__smallBodyElement {
+    width: 33.3%;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__pokemonImageContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__pokemonDescription {
+    font-size: $font-size-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__subtitle {
+    margin: $spacings-L 0;
+  }
+
+  &__pokemonStats {
+  }
+
+  &__pokemonType {
+    margin: 0 $spacings-S 0 0;
+  }
+
+  &__pokemonTypesResistant {
+    margin: $spacings-L 0 0 0;
+  }
+
+  &__pokemonTypesWeaknesses {
+    margin: $spacings-L 0 0 0;
+  }
+
+  &__pokemonMoves {
+  }
+
+  &__pokemonEvolutions {
   }
 }
