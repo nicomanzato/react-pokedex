@@ -48,8 +48,8 @@
   &__smallBodyElement {
     width: 25%;
     margin: $spacings-L 0;
-    box-shadow: 10px 5px 5px $grey;
-    border: rem-calc(1) solid $grey;
+    box-shadow: rem-calc(5) rem-calc(5) $easternBlue;
+    border: rem-calc(1) solid $easternBlue;
 
     @media screen and (max-width: $tablet-breakpoint) {
       margin: 0;
