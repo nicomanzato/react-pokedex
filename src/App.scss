@@ -1,3 +1,9 @@
+@import 'variables.scss';
+
+html {
+  font-family: $primary-font-family;
+}
+
 .app {
   &__container {
     position: relative;
