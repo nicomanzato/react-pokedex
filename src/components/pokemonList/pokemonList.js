@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { PokemonSummary } from '../pokemonSummary/pokemonSummary';
 import './pokemonList.scss';
 
-export class PokemonList extends Component {
-  render() {
-    return (
-      <div className="pokemonList__container">
-        {this.props.data.map((pokemon, index) => (
-          <PokemonSummary
-            data={pokemon}
-            onClick={() => this.props.onClick(pokemon)}
-            key={index}
-            className={'pokemonList__item ' + this.props.classNameItem}
-          />
-        ))}
-      </div>
-    );
-  }
-}
+export const PokemonList = props => {
+  return (
+    <div className="pokemonList__container">
+      {props.data.map((pokemon, index) => (
+        <PokemonSummary
+          data={pokemon}
+          onClick={() => props.onClick(pokemon)}
+          key={index}
+          className={'pokemonList__item ' + props.classNameItem}
+        />
+      ))}
+    </div>
+  );
+};
