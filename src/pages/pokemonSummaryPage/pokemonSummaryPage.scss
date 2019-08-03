@@ -41,7 +41,16 @@
     }
 
     @media screen and (max-width: $smartphone-breakpoint) {
-      padding: $spacings-XS $spacings-XS 0 $spacings-XS;
+      padding: 0;
+    }
+  }
+
+  &__pokemonListItem {
+    @media screen and (max-width: $smartphone-breakpoint) {
+      &:first-child {
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 

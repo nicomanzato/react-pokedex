@@ -5,9 +5,10 @@
     border-radius: rem-calc(15);
     border: rem-calc(1) solid $black;
     color: $secondary-text-color;
-    display: inline;
+    display: flex;
     font-size: $font-size-text;
-    padding: $spacings-XS;
+    justify-content: center;
+    padding: $spacings-XS $spacings-S;
   }
 
   &__electricType {

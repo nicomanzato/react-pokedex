@@ -36,6 +36,8 @@
   }
 
   &__typeContainer {
+    display: flex;
+    flex-direction: row;
     padding: $spacings-M;
     position: absolute;
     right: 0;
@@ -47,5 +49,6 @@
 
   &__pokemonType {
     margin: 0 0 0 $spacings-S;
+    opacity: 0.9;
   }
 }

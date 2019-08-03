@@ -42,6 +42,7 @@ const PokemonDetailPage = ({ history, isLoading, match, pokemon, requestGetPokem
             </div>
             <div className="pokemonDetailsPage__pokemonStats pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
               <div className="pokemonDetailsPage__subheader">Stats</div>
+              <hr />
               <div className="pokemonDetailsPage__subtitle">Pokemon Type</div>
               <div className="pokemonDetailsPage__pokemonTypes">
                 {pokemon.types &&
@@ -70,6 +71,7 @@ const PokemonDetailPage = ({ history, isLoading, match, pokemon, requestGetPokem
             </div>
             <div className="pokemonDetailsPage__pokemonMoves pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
               <div className="pokemonDetailsPage__subheader">Attacks</div>
+              <hr />
               <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">Fast Attacks</div>
               <div className="pokemonDetailsPage__pokemonFastAttacksContainer">
                 {pokemon.attacks &&
@@ -85,6 +87,7 @@ const PokemonDetailPage = ({ history, isLoading, match, pokemon, requestGetPokem
               <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">
                 Special Attacks
               </div>
+              <hr />
               <div className="pokemonDetailsPage__pokemonSpecialAttacksContainer">
                 {pokemon.attacks &&
                   pokemon.attacks.special &&
@@ -100,7 +103,8 @@ const PokemonDetailPage = ({ history, isLoading, match, pokemon, requestGetPokem
             <div className="pokemonDetailsPage__pokemonEvolutions pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
               {pokemon.evolutions && (
                 <>
-                  <div className="pokemonDetailsPage__subheader">Evolution</div>{' '}
+                  <div className="pokemonDetailsPage__subheader">Evolution</div>
+                  <hr />
                   {pokemon.evolutions.map((pokemon, index) => (
                     <PokemonEvolution
                       data={pokemon}
