@@ -87,7 +87,6 @@ const PokemonDetailPage = ({ history, isLoading, match, pokemon, requestGetPokem
               <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">
                 Special Attacks
               </div>
-              <hr />
               <div className="pokemonDetailsPage__pokemonSpecialAttacksContainer">
                 {pokemon.attacks &&
                   pokemon.attacks.special &&

@@ -45,15 +45,6 @@
     }
   }
 
-  &__pokemonListItem {
-    @media screen and (max-width: $smartphone-breakpoint) {
-      &:first-child {
-        padding: 0;
-        margin: 0;
-      }
-    }
-  }
-
   // animations
 
   &__container {

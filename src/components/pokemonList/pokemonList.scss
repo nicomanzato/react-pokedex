@@ -17,16 +17,22 @@
     margin: $spacings-S;
     width: 30%;
 
-    &:hover {
-      box-shadow: rem-calc(2) rem-calc(2) $easternBlue;
-    }
-
     @media screen and (max-width: $tablet-breakpoint) {
       width: 45%;
     }
 
     @media screen and (max-width: $smartphone-breakpoint) {
+      margin: $spacings-S 0;
       width: 100%;
+
+      &:first-child {
+        margin: 0 0 $spacings-S 0;
+        border-top: rem-calc(3) solid $easternBlue;
+      }
+    }
+
+    &:hover {
+      box-shadow: rem-calc(2) rem-calc(2) $easternBlue;
     }
   }
 }
