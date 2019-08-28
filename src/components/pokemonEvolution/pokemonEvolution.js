@@ -5,9 +5,9 @@ import { Image } from '../common/image/image';
 
 export const PokemonEvolution = ({ data, className }) => {
   return (
-    <div className={'pokemonEvolution__container ' + className}>
-      <Image src={data.image} className="pokemonEvolution__pokemonImage" />
-      <div className="pokemonEvolution__pokemonName">{data.name}</div>
+    <div className={'pokemon-evolution ' + className}>
+      <Image src={data.image} className="pokemon-evolution__pokemon-image" />
+      <div className="pokemon-evolution__pokemon-name">{data.name}</div>
     </div>
   );
 };

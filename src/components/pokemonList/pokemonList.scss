@@ -1,14 +1,12 @@
 @import '../../variables.scss';
 
-.pokemonList {
-  &__container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: hidden;
-  }
+.pokemon-list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
 
   &__item {
     box-sizing: border-box;
@@ -17,11 +15,23 @@
     margin: $spacings-S;
     width: 30%;
 
-    @media screen and (max-width: $tablet-breakpoint) {
+    &:hover {
+      box-shadow: rem-calc(2) rem-calc(2) $easternBlue;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .pokemon-list {
+    &__item {
       width: 45%;
     }
+  }
+}
 
-    @media screen and (max-width: $smartphone-breakpoint) {
+@media screen and (max-width: $tablet-breakpoint) {
+  .pokemon-list {
+    &__item {
       margin: $spacings-S 0;
       width: 100%;
 

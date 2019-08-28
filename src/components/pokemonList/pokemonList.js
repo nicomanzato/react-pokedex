@@ -4,13 +4,13 @@ import './pokemonList.scss';
 
 export const PokemonList = props => {
   return (
-    <div className="pokemonList__container">
+    <div className="pokemon-list">
       {props.data.map((pokemon, index) => (
         <PokemonSummary
           data={pokemon}
           onClick={() => props.onClick(pokemon)}
           key={index}
-          className={'pokemonList__item ' + props.classNameItem}
+          className={'pokemon-list__item ' + props.classNameItem}
         />
       ))}
     </div>

@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.pokemonMove {
+.pokemon-move {
   &__container {
     align-items: center;
     display: flex;
@@ -10,17 +10,17 @@
     padding: $spacings-S 0;
   }
 
-  &__attackName {
+  &__attack-name {
     font-size: $font-size-text;
   }
 
-  &__attackDetailsContainer {
+  &__attack-details-container {
     align-items: center;
     display: flex;
     flex-direction: row;
   }
 
-  &__attackPower {
+  &__attack-power {
     border-radius: $spacings-L;
     margin: 0 $spacings-S;
     padding: $spacings-S;

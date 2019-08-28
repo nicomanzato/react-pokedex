@@ -1,10 +1,8 @@
 @import '../../variables.scss';
 
-.pokemonDetailsPage {
-  &__container {
-    background-image: $primary-gradient-color;
-    position: relative;
-  }
+.pokemon-details-page {
+  background-image: $primary-gradient-color;
+  position: relative;
 
   &__header {
     align-items: center;
@@ -14,11 +12,11 @@
     min-height: 25vh;
   }
 
-  &__pokemonTitleContainer {
+  &__pokemon-title-container {
     margin: $spacings-L;
   }
 
-  &__pokemonTitle {
+  &__pokemon-title {
     color: $secondary-text-color;
     font-size: $font-size-header;
     font-weight: 700;
@@ -34,31 +32,17 @@
     min-height: 70vh;
   }
 
-  &__bodyElement {
+  &__body-element {
     padding: $spacings-XL;
     width: 50%;
     background: $secondary-background-color;
-
-    @media screen and (max-width: $tablet-breakpoint) {
-      width: 100%;
-      margin: 0;
-    }
   }
 
-  &__smallBodyElement {
+  &__small-body-element {
     width: 25%;
     margin: $spacings-L 0;
     box-shadow: rem-calc(5) rem-calc(5) $easternBlue;
     border: rem-calc(1) solid $easternBlue;
-
-    @media screen and (max-width: $tablet-breakpoint) {
-      margin: 0;
-      width: 100%;
-
-      box-shadow: unset;
-      border: unset;
-      border-bottom: rem-calc(1) solid $grey;
-    }
   }
 
   &__subheader {
@@ -67,12 +51,12 @@
     justify-content: center;
   }
 
-  &__pokemonImageContainer {
+  &__pokemon-image-container {
     display: flex;
     justify-content: center;
   }
 
-  &__pokemonDescription {
+  &__pokemon-description {
     align-items: center;
     display: flex;
     font-size: $font-size-title;
@@ -84,43 +68,44 @@
     margin: $spacings-L 0;
   }
 
-  &__pokemonStats {
+  &__pokemon-stats {
   }
 
-  &__pokemonTypes {
+  &__pokemon-types {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &__pokemonType {
+  &__pokemon-type {
     margin: $spacings-S $spacings-S $spacings-S 0;
   }
 
-  &__pokemonTypesResistant {
+  &__pokemon-types-resistant {
     margin: $spacings-L 0 0 0;
   }
 
-  &__pokemonTypesWeaknesses {
+  &__pokemon-types-weaknesses {
     margin: $spacings-L 0 0 0;
   }
 
-  &__pokemonMove {
+  &__pokemon-move {
+    border-bottom: rem-calc(1) solid $primary-border-color;
   }
 
-  &__pokemonMoveSubtitle {
+  &__pokemon-move-subtitle {
     margin: $spacings-L 0;
     padding: 0 0 $spacings-S 0;
   }
 
-  &__pokemonEvolutions {
+  &__pokemon-evolutions {
     background-color: $white;
   }
 
-  &__pokemonEvolution {
+  &__pokemon-evolution {
     margin: 0 0 $spacings-L 0;
   }
 
-  &__noEvolutionsAvailable {
+  &__no-evolutions-available {
     font-size: $font-size-title;
     display: flex;
     justify-content: center;
@@ -130,7 +115,7 @@
     height: 100%;
   }
 
-  &__backButton {
+  &__back-button {
     left: $spacings-L;
     position: absolute;
     top: $spacings-L;
@@ -142,13 +127,30 @@
     opacity: 1;
     animation: fadein 300ms;
   }
+}
 
-  @keyframes fadein {
-    from {
-      opacity: 0;
+@media screen and (max-width: $tablet-breakpoint) {
+  .pokemon-details-page {
+    &__body-element {
+      width: 100%;
+      margin: 0;
     }
-    to {
-      opacity: 1;
+    &__small-body-element {
+      margin: 0;
+      width: 100%;
+
+      box-shadow: unset;
+      border: unset;
+      border-bottom: rem-calc(1) solid $grey;
     }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

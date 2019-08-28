@@ -6,16 +6,16 @@ import { PokemonType } from '../pokemonType/pokemonType';
 
 export const PokemonSummary = ({ data, className, onClick }) => {
   return (
-    <div className={'pokemonSummary__container ' + className} onClick={onClick}>
-      <Image src={data.image} className="pokemonSummary__image" />
-      <div className="pokemonSummary__header">
-        <span className="pokemonSummary__pokemonNumber">#{data.number}</span>
-        <span className="pokemonSummary__pokemonName">{data.name}</span>
+    <div className={'pokemon-summary ' + className} onClick={onClick}>
+      <Image src={data.image} className="pokemon-summary__image" />
+      <div className="pokemon-summary__header">
+        <span className="pokemon-summary__pokemon-number">#{data.number}</span>
+        <span className="pokemon-summary__pokemon-name">{data.name}</span>
       </div>
-      <div className="pokemonSummary__typeContainer">
+      <div className="pokemon-summary__type-container">
         {data.types &&
           data.types.map((type, index) => (
-            <PokemonType type={type} key={index} className="pokemonSummary__pokemonType" />
+            <PokemonType type={type} key={index} className="pokemon-summary__pokemon-type" />
           ))}
       </div>
     </div>

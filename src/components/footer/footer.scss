@@ -1,14 +1,12 @@
 @import '../../variables.scss';
 
 .footer {
-  &__container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: $spacings-L;
-  }
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: $spacings-L;
 
-  &__repositoryImage {
+  &__repository-image {
     cursor: pointer;
     height: rem-calc(30);
   }

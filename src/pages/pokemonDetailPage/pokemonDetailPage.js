@@ -27,98 +27,100 @@ const PokemonDetailPage = ({ history, isLoading, match, pokemon, requestGetPokem
     <>
       {isLoading && <LoadingIndicator />}
       {!isLoading && pokemon && (
-        <section className="pokemonDetailsPage__container">
-          <div className="pokemonDetailsPage__header">
-            <div className="pokemonDetailsPage__pokemonTitleContainer">
-              <div className="pokemonDetailsPage__pokemonTitle">{pokemon.name}</div>
+        <section className="pokemon-details-page">
+          <div className="pokemon-details-page__header">
+            <div className="pokemon-details-page__pokemon-title-container">
+              <div className="pokemon-details-page__pokemon-title">{pokemon.name}</div>
             </div>
           </div>
-          <div className="pokemonDetailsPage__body">
-            <div className="pokemonDetailsPage__pokemonImageContainer pokemonDetailsPage__bodyElement">
-              <Image src={pokemon.image} className="pokemonDetailsPage__pokemonImage" />
+          <div className="pokemon-details-page__body">
+            <div className="pokemon-details-page__pokemon-image-container pokemon-details-page__body-element">
+              <Image src={pokemon.image} className="pokemon-details-page__pokemon-image" />
             </div>
-            <div className="pokemonDetailsPage__pokemonDescription pokemonDetailsPage__bodyElement">
+            <div className="pokemon-details-page__pokemon-description pokemon-details-page__body-element">
               {pokemon.classification}
             </div>
-            <div className="pokemonDetailsPage__pokemonStats pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
-              <div className="pokemonDetailsPage__subheader">Stats</div>
+            <div className="pokemon-details-page__pokemon-stats pokemon-details-page__body-element pokemon-details-page__small-body-element">
+              <div className="pokemon-details-page__subheader">Stats</div>
               <hr />
-              <div className="pokemonDetailsPage__subtitle">Pokemon Type</div>
-              <div className="pokemonDetailsPage__pokemonTypes">
+              <div className="pokemon-details-page__subtitle">Pokemon Type</div>
+              <div className="pokemon-details-page__pokemon-types">
                 {pokemon.types &&
                   pokemon.types.map((type, index) => (
-                    <PokemonType type={type} key={index} className="pokemonDetailsPage__pokemonType" />
+                    <PokemonType type={type} key={index} className="pokemon-details-page__pokemon-type" />
                   ))}
               </div>
-              <div className="pokemonDetailsPage__pokemonTypesResistant">
-                <div className="pokemonDetailsPage__subtitle">Strong against to</div>
-                <div className="pokemonDetailsPage__pokemonTypes">
+              <div className="pokemon-details-page__pokemon-types-resistant">
+                <div className="pokemon-details-page__subtitle">Strong against to</div>
+                <div className="pokemon-details-page__pokemon-types">
                   {pokemon.resistant &&
                     pokemon.resistant.map((type, index) => (
-                      <PokemonType type={type} key={index} className="pokemonDetailsPage__pokemonType" />
+                      <PokemonType type={type} key={index} className="pokemon-details-page__pokemon-type" />
                     ))}
                 </div>
               </div>
-              <div className="pokemonDetailsPage__pokemonTypesWeaknesses">
-                <div className="pokemonDetailsPage__subtitle">Weak against to</div>
-                <div className="pokemonDetailsPage__pokemonTypes">
+              <div className="pokemon-details-page__pokemon-types-weaknesses">
+                <div className="pokemon-details-page__subtitle">Weak against to</div>
+                <div className="pokemon-details-page__pokemon-types">
                   {pokemon.weaknesses &&
                     pokemon.weaknesses.map((type, index) => (
-                      <PokemonType type={type} key={index} className="pokemonDetailsPage__pokemonType" />
+                      <PokemonType type={type} key={index} className="pokemon-details-page__pokemon-type" />
                     ))}
                 </div>
               </div>
             </div>
-            <div className="pokemonDetailsPage__pokemonMoves pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
-              <div className="pokemonDetailsPage__subheader">Attacks</div>
+            <div className="pokemon-details-page__pokemonMoves pokemon-details-page__body-element pokemon-details-page__small-body-element">
+              <div className="pokemon-details-page__subheader">Attacks</div>
               <hr />
-              <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">Fast Attacks</div>
-              <div className="pokemonDetailsPage__pokemonFastAttacksContainer">
+              <div className="pokemon-details-page__subtitle pokemon-details-page__pokemon-move-subtitle">
+                Fast Attacks
+              </div>
+              <div className="pokemon-details-page__pokemon-fast-attacks-container">
                 {pokemon.attacks &&
                   pokemon.attacks.fast &&
                   pokemon.attacks.fast.map((attack, index) => (
                     <PokemonMove
                       data={attack}
-                      className="pokemonDetailsPage__pokemonMove"
-                      key={'pokemonDetailsPage__pokemonMove' + index}
+                      className="pokemon-details-page__pokemon-move"
+                      key={'pokemon-details-page__pokemon-move' + index}
                     />
                   ))}
               </div>
-              <div className="pokemonDetailsPage__subtitle pokemonDetailsPage__pokemonMoveSubtitle">
+              <div className="pokemon-details-page__subtitle pokemon-details-page__pokemon-move-subtitle">
                 Special Attacks
               </div>
-              <div className="pokemonDetailsPage__pokemonSpecialAttacksContainer">
+              <div className="pokemon-details-page__pokemon-special-attacks-container">
                 {pokemon.attacks &&
                   pokemon.attacks.special &&
                   pokemon.attacks.special.map((attack, index) => (
                     <PokemonMove
                       data={attack}
-                      className="pokemonDetailsPage__pokemonMove"
-                      key={'pokemonDetailsPage__pokemonMove' + index}
+                      className="pokemon-details-page__pokemon-move"
+                      key={'pokemon-details-page__pokemon-move' + index}
                     />
                   ))}
               </div>
             </div>
-            <div className="pokemonDetailsPage__pokemonEvolutions pokemonDetailsPage__bodyElement pokemonDetailsPage__smallBodyElement">
+            <div className="pokemon-details-page__pokemon-evolutions pokemon-details-page__body-element pokemon-details-page__small-body-element">
               {pokemon.evolutions && (
                 <>
-                  <div className="pokemonDetailsPage__subheader">Evolution</div>
+                  <div className="pokemon-details-page__subheader">Evolution</div>
                   <hr />
                   {pokemon.evolutions.map((pokemon, index) => (
                     <PokemonEvolution
                       data={pokemon}
-                      key={'pokemonDetailsPage__pokemonEvolution' + index}
-                      className="pokemonDetailsPage__pokemonEvolution"
+                      key={'pokemon-details-page__pokemon-evolution' + index}
+                      className="pokemon-details-page__pokemon-evolution"
                     />
                   ))}
                 </>
               )}
               {pokemon.evolutions === null && (
-                <div className="pokemonDetailsPage__noEvolutionsAvailable">No evolution available</div>
+                <div className="pokemon-details-page__no-evolutions-available">No evolution available</div>
               )}
             </div>
           </div>
-          <BackButton className="pokemonDetailsPage__backButton" onClick={handleOnBackButtonClick} />
+          <BackButton className="pokemon-details-page__back-button" onClick={handleOnBackButtonClick} />
         </section>
       )}
     </>

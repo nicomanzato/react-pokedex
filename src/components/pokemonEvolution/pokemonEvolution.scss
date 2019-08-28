@@ -1,19 +1,17 @@
 @import '../../variables.scss';
 
-.pokemonEvolution {
-  &__container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: $spacings-L;
-  }
+.pokemon-evolution {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: $spacings-L;
 
-  &__pokemonImage {
+  &__pokemon-image {
     height: rem-calc(100);
   }
 
-  &__pokemonName {
+  &__pokemon-name {
     font-size: $font-size-text;
   }
 }

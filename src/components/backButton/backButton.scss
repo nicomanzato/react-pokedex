@@ -1,9 +1,8 @@
 @import '../../variables.scss';
 
-.backButton {
-  &__container {
-    cursor: pointer;
-  }
+.back-button {
+  cursor: pointer;
+
   &__arrow {
     border-bottom: rem-calc(5) solid $white;
     border-right: rem-calc(5) solid $white;
@@ -11,10 +10,12 @@
     height: rem-calc(25);
     transform: rotate(-225deg);
     width: rem-calc(25);
+  }
+}
 
-    @media screen and (max-width: $tablet-breakpoint) {
-      height: rem-calc(15);
-      width: rem-calc(15);
-    }
+@media screen and (max-width: $tablet-breakpoint) {
+  &__arrow {
+    height: rem-calc(15);
+    width: rem-calc(15);
   }
 }

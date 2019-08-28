@@ -1,13 +1,11 @@
 @import '../../variables.scss';
 
-.loadingIndicator {
-  &__container {
-    align-items: center;
-    background: $primary-gradient-color;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
+.loading-indicator {
+  align-items: center;
+  background: $primary-gradient-color;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
 }

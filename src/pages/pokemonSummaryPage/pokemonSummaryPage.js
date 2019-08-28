@@ -19,22 +19,22 @@ const PokemonSummaryPage = ({ history, isLoading, pokemon }) => {
     <>
       {isLoading && <LoadingIndicator />}
       {!isLoading && (
-        <section className="pokemonSummaryPage__container">
-          <div className="pokemonSummaryPage__header">
-            <div className="pokemonSummaryPage__titleContainer">
-              <div className="pokemonSummaryPage__title">Pokedex</div>
-              <div className="pokemonSummaryPage__subtitle">
+        <section className="pokemon-summary-page">
+          <div className="pokemon-summary-page__header">
+            <div className="pokemon-summary-page__title-container">
+              <div className="pokemon-summary-page__title">Pokedex</div>
+              <div className="pokemon-summary-page__subtitle">
                 A mini-encyclopedia of Pokémon species, types, evolutions, and moves.
               </div>
             </div>
-            <div className="pokemonSummaryPage__searchContainer">
+            <div className="pokemon-summary-page__search-container">
               <FilterForm />
             </div>
           </div>
-          <div className="pokemonSummaryPage__pokemonListContainer">
+          <div className="pokemon-summary-page__pokemon-list-container">
             <PokemonList
               data={pokemon}
-              classNameItem="pokemonSummaryPage__pokemonListItem"
+              classNameItem="pokemon-summary-page__pokemon-list-item"
               onClick={handleOnPokemonItemClick}
             />
           </div>

@@ -1,85 +1,83 @@
 @import '../../variables.scss';
 
-.pokemonType {
-  &__container {
-    border-radius: rem-calc(15);
-    border: rem-calc(1) solid $black;
-    color: $secondary-text-color;
-    display: flex;
-    font-size: $font-size-text;
-    justify-content: center;
-    padding: $spacings-XS $spacings-S;
-  }
+.pokemon-type {
+  border-radius: rem-calc(15);
+  border: rem-calc(1) solid $black;
+  color: $secondary-text-color;
+  display: flex;
+  font-size: $font-size-text;
+  justify-content: center;
+  padding: $spacings-XS $spacings-S;
 
-  &__electricType {
+  &__electric-type {
     background-color: #f4d81c; // ripe lemon
   }
 
-  &__fireType {
+  &__fire-type {
     background-color: #ff6600; // blaze orange
   }
 
-  &__poisonType {
+  &__poison-type {
     background-color: #991199; // Violet eggplant
   }
 
-  &__grassType {
+  &__grass-type {
     background-color: #0a6906; // japanese laurel Green
   }
 
-  &__flyingType {
+  &__flying-type {
     background-color: #b7b1b1; // nobel grey
   }
 
-  &__waterType {
+  &__water-type {
     background-color: #45b1e8; // picton blue
   }
 
-  &__bugType {
+  &__bug-type {
     background-color: #33cc99; // shamrock green
   }
 
-  &__normalType {
+  &__normal-type {
     background-color: #c0c0c0; // silver grey
   }
 
-  &__groundType {
+  &__ground-type {
     background-color: #514649; // emperor brown
   }
 
-  &__fairyType {
+  &__fairy-type {
     background-color: #ecc7ee; // french lilac
   }
 
-  &__fightingType {
+  &__fighting-type {
     background-color: #7f3a02; // peru tan brown
   }
 
-  &__psychicType {
+  &__psychic-type {
     background-color: #fc0fc0; // shocking pink
   }
 
-  &__dragonType {
+  &__dragon-type {
     background-color: #6495ed; // cornflower blue
   }
 
-  &__rockType {
+  &__rock-type {
     background-color: #d2b48c; // tan brown
   }
 
-  &__steelType {
+  &__steel-type {
     background-color: #b7b1b1; // nobel
   }
 
-  &__iceType {
+  &__ice-type {
     background-color: #08e8de; // bright turquoise
   }
 
-  &__ghostType {
+  &__ghost-type {
     background-color: #3c0878; // winsor purple
   }
 
-  &__darkType {
+  &__dark-type {
     background-color: #55280c; // Cioccolato
   }
 }
